@@ -9,6 +9,7 @@ noqa
 pathlib
 plugin
 pytest
+returncode
 scspell
 setuptools
 thomas

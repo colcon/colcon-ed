@@ -11,4 +11,4 @@ install:
 build: off
 test_script:
   # invoke pytest
-  - "%PYTHON%\\python.exe -m pytest --cov=colcon_package_selection --cov-branch"
+  - "%PYTHON%\\python.exe -m pytest --cov=colcon_ed --cov-branch"

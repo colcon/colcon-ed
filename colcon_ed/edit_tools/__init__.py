@@ -40,11 +40,11 @@ def find_all_files(package_path):
     paths = []
     for dirpath, dirnames, filenames in os.walk(package_path):
         # ignore folder starting with .
-        dirnames[:] = [d for d in dirnames if not d[0] == ['.']]
+        dirnames[:] = [d for d in dirnames if not d[0] == '.']
 
         # ignore hidden files and those ending with .pyc
         filenames = [f for f in filenames
-                     if f[0] != ['.'] and f[-4:] != '.pyc']
+                     if f[0] != '.' and f[-4:] != '.pyc']
 
         for name in filenames:
             paths.append(os.path.join(dirpath, name))

@@ -7,8 +7,8 @@ from colcon_core.package_discovery import add_package_discovery_arguments
 from colcon_core.plugin_system import satisfies_version
 from colcon_core.verb import VerbExtensionPoint
 from colcon_ed.edit_tools import edit_target_file
-from colcon_ed.edit_tools import find_file
 from colcon_ed.edit_tools import FileCompleter
+from colcon_ed.edit_tools import find_file
 from colcon_ed.edit_tools import get_package_path
 
 

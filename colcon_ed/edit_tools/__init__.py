@@ -79,17 +79,11 @@ def edit_target_file(path):
     :param str path: The path of the file to be edited
     :return: process return code
     """
-    process = None
-    if os.name == 'nt':
-        editor = os.getenv('EDITOR')
-        if not editor:
-            editor = 'vim'
-        process = subprocess.Popen([editor, path], shell=True)
-    else:
-        editor = os.environ.get('EDITOR', 'vim')
-        if not editor:
-            editor = 'vim'
-        process = subprocess.Popen([editor, path])
+    editor = os.environ.get('EDITOR', 'vim')
+    if not editor:
+        editor = 'vim'
+    process = subprocess.Popen([editor, path],
+                               shell=(os.name == 'nt'))
     while process.returncode is None:
         try:
             process.communicate()

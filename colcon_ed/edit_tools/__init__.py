@@ -82,7 +82,8 @@ def edit_target_file(path):
     editor = os.environ.get('EDITOR', 'vim')
     if not editor:
         editor = 'vim'
-    process = subprocess.Popen([editor, path])
+    process = subprocess.Popen([editor, path],
+                               shell=(os.name == 'nt'))
     while process.returncode is None:
         try:
             process.communicate()

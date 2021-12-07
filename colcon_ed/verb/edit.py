@@ -21,12 +21,12 @@ class EditVerb(VerbExtensionPoint):
 
     def add_arguments(self, *, parser):  # noqa: D102
         parser.add_argument(
-            'package_name', nargs='?', metavar='PKG_NAME',
+            'package_name', metavar='PKG_NAME',
             type=argument_package_name,
             help='Package name')
 
         args = parser.add_argument(
-            'filename', nargs='?', metavar='FILE_NAME',
+            'filename', metavar='FILE_NAME',
             type=argument_package_name,
             help='File name')
         args.completer = FileCompleter(package_name_key='package_name')

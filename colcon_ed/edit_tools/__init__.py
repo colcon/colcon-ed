@@ -23,7 +23,7 @@ def get_package_path(package_name, args):
     descriptors = discover_packages(args, extensions)
     package_path = ''
     for pkg in descriptors:
-        if(pkg.name == args.package_name):
+        if pkg.name == args.package_name:
             package_path = pkg.path
     return package_path
 

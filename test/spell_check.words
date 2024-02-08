@@ -3,10 +3,12 @@ argparse
 bainian
 colcon
 iterdir
+linter
 lstrip
 noqa
 pathlib
 plugin
+pydocstyle
 pytest
 returncode
 scspell
